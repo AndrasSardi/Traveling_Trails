@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8229d0ad-5a56-4515-800a-e5051e8ed9ab" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3J8KE3Yh4skvxcyRA2RAlIo8Jla" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "Python.script.executor": "Run",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/elesa/GitHub/Traveling_Trails/WelcomeScreen",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-eff1e8def5f5-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10315.174" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8229d0ad-5a56-4515-800a-e5051e8ed9ab" name="Changes" comment="" />
+      <created>1788853959886</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1788853959886</updated>
+      <workItem from="1789037145571" duration="114000" />
+      <workItem from="1789037286615" duration="1903000" />
+      <workItem from="1789375447621" duration="3132000" />
+      <workItem from="1789455090662" duration="3577000" />
+      <workItem from="1789546565964" duration="4465000" />
+      <workItem from="1789636009795" duration="3260000" />
+      <workItem from="1789718793273" duration="6176000" />
+      <workItem from="1789974834092" duration="5727000" />
+      <workItem from="1790076496845" duration="4869000" />
+      <workItem from="1790146596786" duration="8950000" />
+      <workItem from="1790159244269" duration="2851000" />
+      <workItem from="1790231818603" duration="6225000" />
+      <workItem from="1790239780024" duration="119000" />
+      <workItem from="1790239914282" duration="249000" />
+      <workItem from="1790240171091" duration="375000" />
+      <workItem from="1790240553099" duration="731000" />
+      <workItem from="1790241296552" duration="44000" />
+      <workItem from="1790241354191" duration="106000" />
+      <workItem from="1790241466966" duration="1093000" />
+      <workItem from="1790315011096" duration="1012000" />
+      <workItem from="1790580430303" duration="4985000" />
+      <workItem from="1790665978374" duration="2386000" />
+      <workItem from="1790837373231" duration="1870000" />
+      <workItem from="1790931019797" duration="5890000" />
+      <workItem from="1791185542855" duration="3896000" />
+      <workItem from="1791273056702" duration="5175000" />
+      <workItem from="1791360750334" duration="6637000" />
+      <workItem from="1791371334514" duration="1685000" />
+      <workItem from="1791447559177" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TravelingTrail$main.coverage" NAME="main Coverage Results" MODIFIED="1790668524618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
