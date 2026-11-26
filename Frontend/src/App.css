@@ -1,6 +1,3 @@
-/* Traveling Trails — polished, responsive application theme
-   Drop this in App_old.css. No component changes are required. */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root {
@@ -182,9 +179,20 @@ input:focus-visible {
 }
 
 /* Right-hand controls */
+.sidebar {
+  grid-column: 9 / -1;
+  grid-row: 2 / span 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-self: start;
+  min-width: 0;
+}
+
 .form,
 .cities {
-  grid-column: 9 / -1;
+  width: 100%;
   background: var(--surface);
   border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: var(--radius);
@@ -192,11 +200,15 @@ input:focus-visible {
 }
 
 .form {
-  grid-row: 2;
   padding: 22px 22px 20px;
   display: flex;
   flex-direction: column;
-  align-self: start;
+}
+
+.cities {
+  padding: 20px 22px;
+  max-height: 420px;
+  overflow-y: auto;
 }
 
 .mode-header,
@@ -431,13 +443,6 @@ select:focus {
 }
 
 /* Selected cities / calculated order */
-.cities {
-  grid-row: 3;
-  padding: 20px 22px;
-  align-self: start;
-  max-height: 420px;
-  overflow-y: auto;
-}
 
 .cities-title {
   margin: 0 0 12px;
@@ -540,14 +545,32 @@ select:focus {
     min-height: 430px;
   }
 
-  .form {
-    grid-column: 1 / span 7;
+  .sidebar {
+    grid-column: 1 / -1;
     grid-row: 3;
+
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: stretch;
+    gap: 14px;
+
+    width: 100%;
+    min-width: 0;
   }
 
-  .cities {
-    grid-column: 8 / -1;
-    grid-row: 3;
+  .sidebar > .form,
+  .sidebar > .cities {
+    grid-row: auto;
+    grid-column: auto;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    align-self: stretch;
+  }
+
+  .sidebar > .cities {
+    max-height: 420px;
+    overflow-y: auto;
   }
 
   .preset-select {
@@ -611,19 +634,26 @@ select:focus {
     border-radius: 14px;
   }
 
-  .form {
+  .sidebar {
     grid-column: 1 / -1;
     grid-row: 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form,
+  .cities {
+    width: 100%;
+    height: auto;
     padding: 18px;
     border-radius: 14px;
   }
 
   .cities {
-    grid-column: 1 / -1;
-    grid-row: 4;
     max-height: 320px;
-    padding: 18px;
-    border-radius: 14px;
+    overflow-y: auto;
   }
 
   .mode-header {

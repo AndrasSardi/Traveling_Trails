@@ -148,7 +148,7 @@ const CityList = memo(function CityList({listOfCities, result, cityNumberLimit})
 
 const PresetList = memo(function PresetList({ distanceMode, selectedPreset, onChange }) {
     const presets = distanceMode === 'line' ?
-        ["none", "usa", "europe", "india"] :
+        ["none", "hungary", "uk", "europe", "usa"] :
         ["none", "hungary", "uk", "france", "germany"]
 
     return (
@@ -425,24 +425,28 @@ function App() {
                 )}
                 <MapClickHandler onLocationClick={handleMapClick}/>
             </MapContainer>
-            <form className={"form"}>
-                <h3 className={"mode-header"}>Select algorithm options:</h3>
-                <div className={"mode-select"}>
-                    <select value={selectedDistanceMode} onChange={handleDistanceModeChange}>
-                        <option value="line">Straight-line distance</option>
-                        <option value="drive">Driving distance</option>
-                    </select>
-                    <div className="tooltip-container">
-                        <FaRegQuestionCircle className={"help"}/>
+            <div className={"sidebar"}>
+                <form className={"form"}>
+                    <h3 className={"mode-header"}>Select algorithm options:</h3>
+                    <div className={"mode-select"}>
+                        <select value={selectedDistanceMode} onChange={handleDistanceModeChange}>
+                            <option value="line">Straight-line distance</option>
+                            <option value="drive">Driving distance</option>
+                        </select>
+                        <div className="tooltip-container">
+                            <FaRegQuestionCircle className={"help"}/>
 
-                        <span className="tooltip-text">
+                            <span className="tooltip-text">
                             <h1>Choose metric used to calculate distance between cities</h1>
                             <u>Straight-line distance:</u> direct distance in a straight line<br/>
                             <u>Driving distance:</u> distance when driving by car
 
                         </span>
+                        </div>
                     </div>
-                </div>
+                    {/*
+                Contains dropdown menu to select performance mode.
+                With hosting CPU allowance, anything but fast is too slow, so it has been removed. Uncomment to put back.
                 <div className={"mode-select"}>
                     <select value={selectedSpeedMode} onChange={handleSpeedModeChange}>
                         <option value="fast">Fast</option>
@@ -458,39 +462,41 @@ function App() {
                         </span>
                     </div>
                 </div>
-                <div className={"preset-header"}>
-                    <h3>Select a preset:</h3>
-                    <div className="tooltip-container">
-                        <FaRegQuestionCircle className={"help"}/>
+                */}
+                    <div className={"preset-header"}>
+                        <h3>Select a preset:</h3>
+                        <div className="tooltip-container">
+                            <FaRegQuestionCircle className={"help"}/>
 
-                        <span className="tooltip-text">
+                            <span className="tooltip-text">
                             <h1>Picks group of pre-selected cities</h1>
                             Use "None" to pick your own cities
                         </span>
+                        </div>
                     </div>
-                </div>
-                <PresetList distanceMode={selectedDistanceMode} onChange={handleRadioChange} selectedPreset={selectedPreset}></PresetList>
-                <button
-                    type={"submit"}
-                    className={"button"}
-                    onClick={handleButtonClick}
-                    disabled={(selectedCities.length === 0 && selectedPreset === 'none') || loading}
-                >
-                    {loading ? "Processing..." : "Calculate Best Route"}
-                </button>
-                {loading && (
-                    <div className={"loading-container"}>
-                        <button
-                            className={"cancel-button"}
-                            onClick={cancelCalculation}
-                        >
-                            Cancel
-                        </button>
-                        <p>{formatTime(elapsedTime)}</p>
-                    </div>
-                )}
-            </form>
-            <CityList listOfCities={selectedCities} result={result} cityNumberLimit={cityNumberLimit}></CityList>
+                    <PresetList distanceMode={selectedDistanceMode} onChange={handleRadioChange} selectedPreset={selectedPreset}></PresetList>
+                    <button
+                        type={"submit"}
+                        className={"button"}
+                        onClick={handleButtonClick}
+                        disabled={(selectedCities.length === 0 && selectedPreset === 'none') || loading}
+                    >
+                        {loading ? "Processing..." : "Calculate Best Route"}
+                    </button>
+                    {loading && (
+                        <div className={"loading-container"}>
+                            <button
+                                className={"cancel-button"}
+                                onClick={cancelCalculation}
+                            >
+                                Cancel
+                            </button>
+                            <p>{formatTime(elapsedTime)}</p>
+                        </div>
+                    )}
+                </form>
+                <CityList listOfCities={selectedCities} result={result} cityNumberLimit={cityNumberLimit}></CityList>
+            </div>
             <AboutModal isOpen={aboutModalIsOpen} onClose={() => setAboutModalIsOpen(false)}></AboutModal>
             <InfoModal isOpen={infoModalIsOpen} onClose={() => setInfoModalIsOpen(false)}></InfoModal>
         </div>
