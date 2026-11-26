@@ -269,7 +269,6 @@ function App() {
         event.preventDefault();
         setLoading(true);
         setStartTime(Date.now());
-        const start = Date.now();
 
         try {
             const newResult = await calculateRoute({
@@ -289,11 +288,6 @@ function App() {
                 alert(error.message);
             }
         } finally {
-            const elapsed = Math.floor(
-                (Date.now() - start) / 1000
-            );
-            console.log("elapsedTime: ", formatTime(elapsed));
-
             setLoading(false);
             controllerRef.current = null;
             setStartTime(null);
